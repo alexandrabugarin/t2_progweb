@@ -16,7 +16,11 @@
                     <td>{{user.name}}</td>
                     <td>{{user.age}}</td>
                     <td>{{user.email}}</td>
-                    <td>Atualizar | Excluir</td>
+                    <td>
+                        <a href="{% url 'user:update-user' pk=user.id %}">Atualizar</a> 
+                         | 
+                         <a href="{% url 'user:delete-user' pk=user.id %}">Excluir</a>
+                    </td>
                 </tr>
             {% empty %}
                 <tr>

@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atualiza usuário</title>
 </head>
 <body>
     {% include 'user/links.html' %}
-    <h1>Cria Usuário</h1>
+    <h1>Atualiza Usuário</h1>
     <form action="" method="post">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
-        <button type="submit">Criar usuario</button>
+        <button type="submit">Atualiza usuario</button>
     </form>
 </body>
 </html>

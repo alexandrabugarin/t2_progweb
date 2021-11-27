@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Confira os dados</title>
 </head>
 <body>
     {% include 'user/links.html' %}
-    <h1>Cria Usuário</h1>
+    <h1>Confira os dados</h1>
+    <p>Confira atentamente os dados antes de apagar o usuário</p>
     <form action="" method="post">
         {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-        </table>
-        <button type="submit">Criar usuario</button>
+        Confirme que você quer remover {{user.name}}
+        <button type="submit">Confirmar</button>
     </form>
 </body>
 </html>
