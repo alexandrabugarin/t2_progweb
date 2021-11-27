@@ -1,4 +1,5 @@
 from django.db import models
+
 class User(models.Model):
     name = models.CharField(max_length=100, help_text='Entre com o seu nome')
     age = models.IntegerField(help_text= 'Entre com a sua idade')
