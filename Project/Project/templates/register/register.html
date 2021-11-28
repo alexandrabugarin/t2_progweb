@@ -1,10 +1,10 @@
-{% extends 'register/base.html' %}
+{% extends 'register/baseCadastro.html' %}
 
-{% block title %} Registro {% endblock %}
+{% block title %} Cadastro {% endblock %}
 
 {% block content %}
 
-<h2>Registro de usuário</h2>
+<h2>Cadastre-se</h2>
 <p>Entre com os seus dados aqui:</p>
 
 <form method="post">
@@ -12,7 +12,7 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input type="submit" value="Confirmar registro">
+    <input type="submit" value="Cadastrar">
 </form>
 
 {% endblock %}

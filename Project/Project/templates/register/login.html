@@ -1,4 +1,4 @@
-{% extends 'register/base.html' %}
+{% extends 'register/baseLogin.html' %}
 
 {% block title %} Login {% endblock %}
 
@@ -10,7 +10,7 @@
     {% csrf_token %}
     <table>
         {{ form.as_table }}
-    </table>
+    </table>    
     <input type="submit" value="Login">
 </form>
 {% endblock %}
