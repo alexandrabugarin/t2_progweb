@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'user', 
     'Project',
     'catalog.apps.CatalogConfig',
+    'rest_framework',
 
 ]
 

@@ -1,12 +1,16 @@
+import sys
+sys.path.append("..")
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
+from catalog.serializer import *
+from catalog.models import *
 
 def home(request):
     return render(request, 'register/home.html')
 
 def publicacao(request):
-    publicacoes = Publicacoes.objects.all()
-    return render(request, 'register/publicacao.html', {'publicacoes', publicacoes})
+    publicacoes = PublicacaoSerializer(Publicacoes.objects.all(), many=True).data
+    return render(request, 'register/publicacao.html', {'publicacoes': publicacoes})
 
 def registerUser(request): 
     if request.method == 'POST':
