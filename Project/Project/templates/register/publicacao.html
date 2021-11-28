@@ -11,6 +11,11 @@
       <h5>Title description, Dec 7, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
     </div>
+    <ul>
+      {% for publicacao in publicacoes %}
+        <li>{{publicacao.titulo}}</li>
+      {% endfor%}
+    </ul>
 </div>
 
 <div class="footer">

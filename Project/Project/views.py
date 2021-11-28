@@ -5,18 +5,19 @@ def home(request):
     return render(request, 'register/home.html')
 
 def publicacao(request):
-    return render(request, 'register/publicacao.html')
+    publicacoes = Publicacoes.objects.all()
+    return render(request, 'register/publicacao.html', {'publicacoes', publicacoes})
 
 def registerUser(request): 
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('sec-home')
+            return redirect('home')
     else:
         form = UserCreationForm()
     context = {'form': form}
-    return render(request, 'register/register.html', context)
+    return render(request, 'register/cadastro.html', context)
 
 def profile(request):
       return render(request, 'register/profile.html')

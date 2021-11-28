@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.urls.conf import include
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
@@ -27,7 +27,7 @@ urlpatterns = [
     #PAGINA 1: LOGIN 
     path('', LoginView.as_view(template_name="register/login.html"), name = 'sec-login'),
     #PAGINA 2: CADASTRO DE USUÁRIO
-    path('accounts/register/', views.registerUser, name='sec-register'),
+    path('accounts/register/', views.registerUser, name='cadastro'),
     path('accounts/finishRegister/<int:pk>/', UpdateView.as_view(
         template_name='register/user_form.html', 
         success_url=reverse_lazy('sec-profile'), 
@@ -49,10 +49,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #PAGINA 7: LOGOUT
     path('accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('home'), ), name='sec-logout'),
-
-
-    path('users/', include('user.urls')),
-     
-    
 
 ]

@@ -1,16 +1,28 @@
 {% extends 'register/baseLogin.html' %}
-
+{% load static %}
 {% block title %} Login {% endblock %}
 
 {% block content %}
 
-<h2>Login do usuário</h2>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+          <h3>Faça seu login</h3>
+          <br>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>    
+            <br>
+            <input type="submit" value="Login">
+        </form>
+        <a href="{% url 'cadastro' %}">Novo por aqui? Cadastre-se</a>
+      </div>
+      <div class="col-sm">
+        <img style='height: 100%; width: 100%; object-fit: contain', src="{% static 'img/fofoca.jpg' %}", alt = "Portal da Fofoca" >
+    </div>
+  </div>
 
-<form method="post">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>    
-    <input type="submit" value="Login">
-</form>
+
 {% endblock %}

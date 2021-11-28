@@ -8,11 +8,11 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-    |<a href="{% url 'sec-register' %}">Novo por aqui? Cadastre-se</a>
     {% if user.is_authenticated %}
-        <a href="{% url 'sec-home' %}">Home</a>
+        <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'sec-logout' %}">Logout</a>
-
+    {% else %}
+   |    <a href="{% url 'sec-login' %}?next={ url 'home' %}">Login</a>
     {% endif %}
     <hr>
     {% block content %} {% endblock %}
