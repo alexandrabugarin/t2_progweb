@@ -40,14 +40,12 @@ urlpatterns = [
         ),
         name='sec-userComplet'),
     #PAGINA 3: HOME
-    path('home', views.home, name ='home'),
-    #PAGINA 4: PUBLICACAO
-    path('publicacao', views.publicacao, name='publicacao'),
+    path('publicacao', views.publicacao, name ='publicacao'),
     #PAGINA 5: PERFIL USUÁRIO
     path('accounts/profile/', views.profile, name='sec-profile'),
     #PAGINA 6: LOGIN ADMIN
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
     #PAGINA 7: LOGOUT
-    path('accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('home'), ), name='sec-logout'),
+    path('accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('publicacao'), ), name='sec-logout'),
 
 ]
