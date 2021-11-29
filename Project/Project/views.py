@@ -26,7 +26,7 @@ def registerUser(request):
     return render(request, 'register/cadastro.html', context)
 
 def profile(request):
-    usuarios = UserSerializer(User.objects.all(), many=False).data
+    usuarios = UserSerializer(User.objects.all()[0]).data
     return render(request, 'register/profile.html', {'User': usuarios})
 
 def userForm(request):

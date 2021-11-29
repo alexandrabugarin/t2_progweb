@@ -29,7 +29,7 @@
           <a class="nav-link" href="{% url 'sec-profile' %}">Perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sec-logout">Logout</a>
+          <a class="nav-link" href="{% url 'sec-logout' %}">Logout</a>
         </li> 
       </ul>
     </div>  
@@ -41,9 +41,9 @@
   <p>Nome:</p>
   <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >{{User.name}}</p>
   <p>Idade:</p>
-  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >Entre com sua idade</p>
+  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >{{User.age}}</p>
   <p>Email:</p>
-  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >Entre com seu email</p>
+  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >{{User.email}}</p>
   <button style="border-radius: 20px; background-color: violet; text-align: center;">Editar</button>
 </div>
 

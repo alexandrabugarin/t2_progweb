@@ -39,13 +39,13 @@ urlpatterns = [
         ],
         ),
         name='sec-userComplet'),
-    #PAGINA 3: HOME
+    #HOME
     path('publicacao', views.publicacao, name ='publicacao'),
-    #PAGINA 5: PERFIL USUÁRIO
+    #PERFIL USUÁRIO
     path('accounts/profile/', views.profile, name='sec-profile'),
-    #PAGINA 6: LOGIN ADMIN
+    #LOGIN ADMIN
     path('admin/', admin.site.urls, name='admin'),
-    #PAGINA 7: LOGOUT
+    #LOGOUT
     path('accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('sec-login'), ), name='sec-logout'),
 
 ]
