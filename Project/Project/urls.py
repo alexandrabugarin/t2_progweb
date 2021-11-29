@@ -46,6 +46,6 @@ urlpatterns = [
     #PAGINA 6: LOGIN ADMIN
     path('admin/', admin.site.urls, name='admin'),
     #PAGINA 7: LOGOUT
-    path('accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('publicacao'), ), name='sec-logout'),
+    path('accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('sec-login'), ), name='sec-logout'),
 
 ]

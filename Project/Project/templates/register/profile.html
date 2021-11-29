@@ -34,4 +34,17 @@
       </ul>
     </div>  
   </nav>
+
+<div style="margin:20px">
+  <h3>Meus Dados</h3>
+  <img style="align-content: center; display:block; margin-left: auto; margin-right: auto;" src="{% static 'img/user.png' %}", alt = "User", width=150>
+  <p>Nome:</p>
+  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >{{User.name}}</p>
+  <p>Idade:</p>
+  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >Entre com sua idade</p>
+  <p>Email:</p>
+  <p style="border:2px; border-style: solid; border-color: purple ; border-radius: 10px;" >Entre com seu email</p>
+  <button style="border-radius: 20px; background-color: violet; text-align: center;">Editar</button>
+</div>
+
 {% endblock %}

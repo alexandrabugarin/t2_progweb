@@ -6,4 +6,4 @@ class User(models.Model):
     email = models.EmailField(help_text='Entre com o seu email') 
 
     def __str__(self): 
-        return self.nome + ': ' + self.email
+        return self.name + ': ' + self.email
